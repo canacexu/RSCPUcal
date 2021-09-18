@@ -22,7 +22,7 @@ This Python module is used to process excel worksheets.(File extension name '.xl
 The output of the module is a file. The title of each column in the file is the file name in the list, and the value of each column is the corresponding calculation result. (for example, new_RSCPU.xlsx)
 ## Details
 - There are 3,721 coding codon pairs, if using a standard translation table. The equation to compute RSCPU for a pair of codon is as follows:
-[formula]()
+![formula](https://raw.githubusercontent.com/canacexu/RSCPUcal/main/formula.jpg)
 - where xi is the number of the occurrences of the ith kind of codon pairs, and ni is the number of synonymous codon pair for the ith type amino acid pair.
 - The input of the function is a contingency file, you can find an example in the folder XXX in the RSCPUcal directory. You should firstly make the file by software ANACONDA 2.0 (https://bioinformatics.ua.pt/software/anaconda/). 
 ## References
