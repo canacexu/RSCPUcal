@@ -10,14 +10,15 @@ RSCPUcal: Determine Relative Synonymous Codon Pair Usage (RSCPU)
 - openpyxl
 ## Usage
 This Python module is used to process excel worksheets.(File extension name '.xlsx' is required) You can refer to the test documents.
-- Required arguments:
-A list of file names that need to be processed. (Only the main file name is required, and no extension name is required, e.g. list=[‘test_1’,’test_2’])
+### Required arguments:
+- A list of file names that need to be processed. (Only the main file name is required, and no extension name is required, e.g. list=[‘test_1’,’test_2’])
+- Please download 'RSCPU_template.xlsx' before use.
 ```Python
    import RSCPUcal
    list=[]
    a=RSCPUcal.RSCPU_count(list)
 ```
-- Output
+### Output
 The output of the module is a file. The title of each column in the file is the file name in the list, and the value of each column is the corresponding calculation result. (for example, new_RSCPU.xlsx)
 ## Details
 - There are 3,721 coding codon pairs, if using a standard translation table. The equation to compute RSCPU for a pair of codon is as follows:
