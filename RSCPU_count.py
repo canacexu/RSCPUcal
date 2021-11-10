@@ -1,12 +1,12 @@
-### 通过对CDS区的读取，统计密码子对出现的频率
+### Count the frequency of codon occurrence by reading the CDS sequence.
 def RSCPU_s(name):
     for t in name:
         import openpyxl
 
-        wb_n = openpyxl.load_workbook('kong.xlsx')
+        wb_n = openpyxl.load_workbook('zero.xlsx')
         ws_n = wb_n.active
 
-        # 提取基因序列
+        # Extract gene sequence
         GeneDetail = ''
         AllGeneDetails = []
         with open(t + '.txt', 'r+') as fileStream:
@@ -38,7 +38,7 @@ def RSCPU_s(name):
 
 
 
-        # 得到密码子
+        # Get codon
 
         def DNA_complement(sequence):
             # sequence = sequence.upper()
@@ -52,7 +52,7 @@ def RSCPU_s(name):
         for Index in range(len(AllGeneDetails)):
             AllGeneDetails[Index] = DNA_complement(AllGeneDetails[Index])
 
-        # 组成codon-pair,并计数
+        # form codon-pair and count
         codon_pair = []
         for k in range(len(AllGeneDetails)):
             for j in range(2, len(AllGeneDetails[k]), 3):
@@ -63,7 +63,7 @@ def RSCPU_s(name):
             d[pair] = d.get(pair, 0) + 1
         ls = list(d.items())
         # print(len(ls))
-        # 将统计得到的数值填入excel
+        # Fill the statistics in the table
         ws_n.cell(row=1, column=1, value="codon-pair")
         for i in range(2, len(ls) + 2):
             for j in range(2,3723):
