@@ -1,7 +1,7 @@
 # RSCPUcal
 RSCPUcal: Determine Relative Synonymous Codon Pair Usage (RSCPU)
 ## Description
-- RSCPUcal is a python package for the analysis of Relative Synonymous Codon Pair Usage in DNA coding sequences. It implements the RSCPU described by Novoa et al. 2019.
+- RSCPUcal is a python package for the analysis of Relative Synonymous Codon Pair Usage in DNA coding sequences. It implements the RSCPU described by Duy et al.(2016).
 - This package is writen by Yucong Xu and Lingming Kong.
 - If you have any doubts, questions, bug reports, etc. please contact us at:
 - Lingming Kong* (acq613@outlook.com)
